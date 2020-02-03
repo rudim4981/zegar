@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+</style>
+</head>
+<body style="display: flex; align-items: center;">
+<div style="display: inline-block;margin-left: auto;margin-right: auto;">
+<div style="background-image: url(tarcza.png);width: 400px;height: 400px;background-size: cover;">
+	<div id="godzina" style="margin-left: 196.4999999px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width:12px">
+		<div style="height: 200px;"></div>
+	</div>
+	<div id="minuta" style="margin-left: 199px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width: 8px;">
+		<div style="height: 200px;"></div>
+	</div>	
+	<div id="sekunda" class="sekunda" style="margin-left: 201px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width: 4px;">
+		<div style="height: 200px;"></div>
+	</div>
+	<div style="margin-left: 200px;position: absolute;">
+	<img src="sekundnik.png" style="    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-top: 192px;
+    margin-left: -5px;">
+		<div style="height: 200px;"></div>
+	</div>
+</div>
+</div>
+</body>
+<script>
+function aktualizacjaDat(){
+var data = new Date();
+var sekundy = data.getSeconds();
+var milisekundy = data.getMilliseconds()/1000;
+var minuty = data.getMinutes();
+var godziny = data.getHours();
+document.getElementById('sekunda').style.transform = 'scale(0.8) rotate(' + (360/60) * (sekundy + milisekundy) + 'deg)';
+document.getElementById('minuta').style.transform = 'scale(0.8) rotate(' + (360/60) * (minuty + sekundy/60) + 'deg)';
+document.getElementById('godzina').style.transform = 'scale(0.6) rotate(' + (360/12) * (godziny + minuty/60)+ 'deg)';
+}
+	setInterval(aktualizacjaDat,1);
+</script>
+</html>
