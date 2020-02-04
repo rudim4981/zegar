@@ -28,15 +28,11 @@ width: 300px;
     background-size: cover;
     background-position: 50% 0px;
 }
-	.c-sekundy{
-	animation:naszaAnimacja 1s linear infinite;
-	 backface-visibility:hidden;
-}
 
 @keyframes naszaAnimacja
 {
-  0% { transform:perspective(300px) rotateX(0); }
-  100% { transform:perspective(300px) rotateX(360deg); }
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(100px); }
 }
 </style>
 </head>
@@ -150,6 +146,10 @@ document.getElementById('godzina-2').style.transform = 'scale(0.6) rotate(' + (3
 
 //document.getElementById('minuta-3').style.backgroundPosition = '50% ' + -( minuty * 100 ) + 'px';
 //document.getElementById('godzina-3').style.backgroundPosition = '50% ' + -( godziny * 100 ) + 'px';
+if( sekundy == 1 )
+	setTimeout(function(){
+	document.getElementById('c-sekundy').style.animation= 'naszaAnimacja 1s linear infinite';
+	}, 500);
 	
 if( ( godziny >= 0 ) && ( godziny <= 9 ) )
 	document.getElementById('c-godziny').innerHTML = '0' + godziny;
