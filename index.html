@@ -77,10 +77,20 @@ document.getElementById('sekunda').style.transform = 'scale(0.8) rotate(' + (360
 document.getElementById('minuta').style.transform = 'scale(0.8) rotate(' + (360/60) * (minuty + sekundy/60) + 'deg)';
 document.getElementById('godzina').style.transform = 'scale(0.6) rotate(' + (360/12) * (godziny + minuty/60)+ 'deg)';
 	
+if( ( godziny >= 0 ) && ( godziny <= 9 ) )
+	document.getElementById('c-godziny').innerHTML = '0' + godziny;
+else
+	document.getElementById('c-godziny').innerHTML = godziny;
+
+if( ( minuty >= 0 ) && ( minuty <= 9 ) )
+	document.getElementById('c-minuty').innerHTML = '0' + minuty;
+else
+	document.getElementById('c-minuty').innerHTML = minuty;
 	
-document.getElementById('c-godziny').innerHTML = godziny;
-document.getElementById('c-minuty').innerHTML = minuty;
-document.getElementById('c-sekundy').innerHTML = sekundy;
+if( ( sekundy >= 0 ) && ( sekundy <= 9 ) )
+	document.getElementById('c-sekundy').innerHTML = '0' + sekundy;
+else
+	document.getElementById('c-sekundy').innerHTML = sekundy;
 	
 }
 	setInterval(aktualizacjaDat,1);
