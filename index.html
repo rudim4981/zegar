@@ -48,6 +48,30 @@ width: 300px;
 	</div>
 </div>
 </div>
+<div style="display: table;margin-left: auto;margin-right: auto;">
+<div style="background-image: url(tarcza.png);width: 400px;height: 400px;background-size: cover;">
+	<div id="godzina-2" style="margin-left: 196.4999999px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width:12px">
+		<div style="height: 200px;"></div>
+	</div>
+	<div id="minuta-2" style="margin-left: 199px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width: 8px;">
+		<div style="height: 200px;"></div>
+	</div>	
+	<div id="sekunda-2" class="sekunda" style="margin-left: 201px;position: absolute;">
+		<img src="sekundnik.png" style="height: 200px;width: 4px;">
+		<div style="height: 200px;"></div>
+	</div>
+	<div style="margin-left: 200px;position: absolute;">
+	<img src="sekundnik.png" style="    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    margin-top: 192px;
+    margin-left: -5px;">
+		<div style="height: 200px;"></div>
+	</div>
+</div>
+</div>
 	<div class="cyfrowy">
 		<div class="c-godziny c a">
 			<p class="item" id="c-godziny">15</p>
@@ -77,6 +101,10 @@ var godziny = data.getHours();
 document.getElementById('sekunda').style.transform = 'scale(0.8) rotate(' + (360/60) * (sekundy + milisekundy) + 'deg)';
 document.getElementById('minuta').style.transform = 'scale(0.8) rotate(' + (360/60) * (minuty + sekundy/60) + 'deg)';
 document.getElementById('godzina').style.transform = 'scale(0.6) rotate(' + (360/12) * (godziny + minuty/60)+ 'deg)';
+	
+document.getElementById('sekunda-2').style.transform = 'scale(0.8) rotate(' + (360/60) * sekundy + 'deg)';
+document.getElementById('minuta-2').style.transform = 'scale(0.8) rotate(' + (360/60) * minuty + 'deg)';
+document.getElementById('godzina-2').style.transform = 'scale(0.6) rotate(' + (360/12) * godziny + 'deg)';
 	
 if( ( godziny >= 0 ) && ( godziny <= 9 ) )
 	document.getElementById('c-godziny').innerHTML = '0' + godziny;
