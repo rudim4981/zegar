@@ -133,24 +133,11 @@ document.getElementById('sekunda-2').style.transform = 'scale(0.8) rotate(' + (3
 document.getElementById('minuta-2').style.transform = 'scale(0.8) rotate(' + (360/60) * minuty + 'deg)';
 document.getElementById('godzina-2').style.transform = 'scale(0.6) rotate(' + (360/12) * godziny + 'deg)';
 
-if( ( sekundy >= 1 ) && ( sekundy <= 58 ) ){
+
 	document.getElementById('sekunda-3').style.transition = ".4s";
 	document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( sekundy * 100 ) + 'px';
-}
-else if( sekundy == 59 ){
-	document.getElementById('sekunda-3').style.transition = ".4s";
-	document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( 59 * 100 ) + 'px';
-	setTimeout(function(){ 
-		document.getElementById('sekunda-3').style.transition = ".4s";
-		document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( 60 * 100 ) + 'px';
-	}, 600);
-	setTimeout(function(){ 
-		document.getElementById('sekunda-3').style.transition = "0s";
-	}, 1010);
-	setTimeout(function(){ 
-		document.getElementById('sekunda-3').style.backgroundPosition = '50% 0px';
-	}, 1550);
-}
+
+
 //document.getElementById('minuta-3').style.backgroundPosition = '50% ' + -( minuty * 100 ) + 'px';
 //document.getElementById('godzina-3').style.backgroundPosition = '50% ' + -( godziny * 100 ) + 'px';
 	
