@@ -98,19 +98,19 @@ width: 300px;
 	</div>
 	
 		<div class="cyfrowy">
-		<div id="godzina-2" class="c-godziny qq a">
+		<div id="godzina-3" class="c-godziny qq a">
 			
 		</div>
 		<div class="a">
 			<p class="item" class="item">:</p>
 		</div>
-		<div id="minuta-2" class="c-minuty qq a">
+		<div id="minuta-3" class="c-minuty qq a">
 			
 		</div>
 		<div class="a">
 			<p class="item">:</p>
 		</div>
-		<div id="sekunda-2" class="c-sekundy qq a">
+		<div id="sekunda-3" class="c-sekundy qq a">
 			
 		</div>
 		</div>
@@ -128,9 +128,13 @@ document.getElementById('sekunda').style.transform = 'scale(0.8) rotate(' + (360
 document.getElementById('minuta').style.transform = 'scale(0.8) rotate(' + (360/60) * (minuty + sekundy/60) + 'deg)';
 document.getElementById('godzina').style.transform = 'scale(0.6) rotate(' + (360/12) * (godziny + minuty/60)+ 'deg)';
 	
-document.getElementById('sekunda-2').style.backgroundSize = '50% ' + -( sekundy * 100 ) + 'px';
-document.getElementById('minuta-2').style.backgroundSize = '50% ' + -( minuty * 100 ) + 'px';
-document.getElementById('godzina-2').style.backgroundSize = '50% ' + -( godziny * 100 ) + 'px';
+	document.getElementById('sekunda-2').style.transform = 'scale(0.8) rotate(' + (360/60) * sekundy + 'deg)';
+document.getElementById('minuta-2').style.transform = 'scale(0.8) rotate(' + (360/60) * minuty + 'deg)';
+document.getElementById('godzina-2').style.transform = 'scale(0.6) rotate(' + (360/12) * godziny + 'deg)';
+	
+document.getElementById('sekunda-3').style.backgroundSize = '50% ' + -( sekundy * 100 ) + 'px';
+document.getElementById('minuta-3').style.backgroundSize = '50% ' + -( minuty * 100 ) + 'px';
+document.getElementById('godzina-3').style.backgroundSize = '50% ' + -( godziny * 100 ) + 'px';
 	
 if( ( godziny >= 0 ) && ( godziny <= 9 ) )
 	document.getElementById('c-godziny').innerHTML = '0' + godziny;
