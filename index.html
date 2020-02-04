@@ -139,9 +139,13 @@ if( ( sekundy >= 1 ) && ( sekundy <= 58 ) ){
 }
 else if( sekundy == 59 ){
 	setTimeout(function(){ 
-		document.getElementById('sekunda-3').style.transition = "0s";
-		document.getElementById('sekunda-3').style.backgroundPosition = '50% 0px'; 
-	}, 800);
+		document.getElementById('sekunda-3').style.transition = ".7s";
+		document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( 60 * 100 ) + 'px';
+		setTimeout(function(){ 
+			document.getElementById('sekunda-3').style.transition = "0s";
+			document.getElementById('sekunda-3').style.backgroundPosition = '50% 0px';
+		}, 800);
+	}, 1000);
 	document.getElementById('sekunda-3').style.transition = ".7s";
 	document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( 59 * 100 ) + 'px';
 	
