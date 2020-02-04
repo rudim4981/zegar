@@ -143,13 +143,13 @@ else if( sekundy == 59 ){
 	setTimeout(function(){ 
 		document.getElementById('sekunda-3').style.transition = ".4s";
 		document.getElementById('sekunda-3').style.backgroundPosition = '50% ' + -( 60 * 100 ) + 'px';
-		setTimeout(function(){ 
-			document.getElementById('sekunda-3').style.transition = "0s";
-			setTimeout(function(){ 
-				document.getElementById('sekunda-3').style.backgroundPosition = '50% 0px';
-			}, 300);
-		}, 410);
 	}, 1000);
+	setTimeout(function(){ 
+		document.getElementById('sekunda-3').style.transition = "0s";
+	}, 1410);
+	setTimeout(function(){ 
+		document.getElementById('sekunda-3').style.backgroundPosition = '50% 0px';
+	}, 1500);
 }
 //document.getElementById('minuta-3').style.backgroundPosition = '50% ' + -( minuty * 100 ) + 'px';
 //document.getElementById('godzina-3').style.backgroundPosition = '50% ' + -( godziny * 100 ) + 'px';
