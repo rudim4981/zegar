@@ -28,6 +28,16 @@ width: 300px;
     background-size: cover;
     background-position: 50% 0px;
 }
+	.c-sekundy{
+	animation:naszaAnimacja 1s linear infinite;
+	 backface-visibility:hidden;
+}
+
+@keyframes naszaAnimacja
+{
+  0% { transform:perspective(300px) rotateX(0); }
+  100% { transform:perspective(300px) rotateX(360deg); }
+}
 </style>
 </head>
 <body>
