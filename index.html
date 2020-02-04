@@ -76,6 +76,12 @@ var godziny = data.getHours();
 document.getElementById('sekunda').style.transform = 'scale(0.8) rotate(' + (360/60) * (sekundy + milisekundy) + 'deg)';
 document.getElementById('minuta').style.transform = 'scale(0.8) rotate(' + (360/60) * (minuty + sekundy/60) + 'deg)';
 document.getElementById('godzina').style.transform = 'scale(0.6) rotate(' + (360/12) * (godziny + minuty/60)+ 'deg)';
+	
+	
+document.getElementById('c-godziny').innerHTML = godziny;
+document.getElementById('c-minuty').innerHTML = minuty;
+document.getElementById('c-sekundy').innerHTML = sekundy;
+	
 }
 	setInterval(aktualizacjaDat,1);
 </script>
