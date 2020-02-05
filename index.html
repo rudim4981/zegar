@@ -147,9 +147,9 @@ document.getElementById('godzina-2').style.transform = 'scale(0.6) rotate(' + (3
 //document.getElementById('minuta-3').style.backgroundPosition = '50% ' + -( minuty * 100 ) + 'px';
 //document.getElementById('godzina-3').style.backgroundPosition = '50% ' + -( godziny * 100 ) + 'px';
 
-	//setTimeout(function(){
-	//document.getElementById('c-sekundy').style.animation= 'naszaAnimacja 1s linear infinite';
-	//}, 500);
+	setTimeout(function(){
+	document.getElementById('c-sekundy').style.animation= 'naszaAnimacja 1s linear infinite';
+	}, 500);
 	
 if( ( godziny >= 0 ) && ( godziny <= 9 ) )
 	document.getElementById('c-godziny').innerHTML = '0' + godziny;
